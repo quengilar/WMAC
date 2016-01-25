@@ -1,0 +1,14 @@
+Power on
+Display 30
+When accellerometer registers shift, subtract 1 from the counter
+if {
+  magazine removed and round count == 0
+  display 0 until magazine replaced
+  reset to 30
+} 
+
+else {
+  magazine removed and round count > 0 
+  display 1 until magazine replaced
+  reset to 31
+}
